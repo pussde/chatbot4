@@ -12,5 +12,5 @@ services:
     value: 'Gx/HJZLI+AqQIQVBe9+a8W/01quYuf0UP5CTLflhFiPGCxpO4XrOnv1Ndn/1KWM1wLHdRgwadMKMzM3lDiskylXvZN4TtBcahoFh8QxC5VqA0xtzvR833shFHqs4snqDwnUUXOCr59YOKi09X2icBgdB04t89/1O/w1cDnyilFU='
     sync: true
   - key: LINE_CHANNEL_SECRET
-    value:: 'ce2dc8919d7c760eb3124b113ad4138c'
+    value: 'ce2dc8919d7c760eb3124b113ad4138c'
     sync: true
