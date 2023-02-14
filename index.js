@@ -41,6 +41,11 @@ async function handleEvent(event) {
     // ignore non-text-message event
     return Promise.resolve(null);
   }
+  
+  if (!event.message.text.startsWith('/gpt')) {
+    // ignore non-start-with-/gpt message
+    return Promise.resolve(null);
+  }
 
   const completion = await openai.createCompletion({
     model: "text-davinci-003",
@@ -51,6 +56,7 @@ async function handleEvent(event) {
   // create a echoing text message
   const echo = { type: 'text', text: completion.data.choices[0].text.trim() };
 
+  
   // use reply API
   return client.replyMessage(event.replyToken, echo);
 }
