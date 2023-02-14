@@ -1,14 +1,14 @@
 services:
 - type: web
-  name: line-bot-nodejs-echo
+  name: chatbot4
   env: node
-  repo: https://github.com/line/line-bot-sdk-nodejs.git
+  repo: https://github.com/pussde/chatbot4.git
   buildCommand: cd chatbot4;npm install
   startCommand: cd chatbot4;node .
   plan: free
   autoDeploy: false
   envVars:
-  - key: CHANNEL_ACCESS_TOKEN
-    sync: false
-  - key: CHANNEL_SECRET
-    sync: false
+  - key: LINE_CHANNEL_ACCESS_TOKEN
+    sync: true
+  - key: LINE_CHANNEL_SECRET
+    sync: true
