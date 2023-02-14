@@ -1,5 +1,5 @@
 {
-  "name": "echo-bot",
+  "name": "chatbot4",
   "version": "0.0.0",
   "description": "An example LINE bot just to echo messages",
   "main": "index.js",
