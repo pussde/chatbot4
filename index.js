@@ -47,15 +47,16 @@ async function handleEvent(event) {
     return Promise.resolve(null);
   }
 
+  const prompt_str = event.message.text.slice(4);
+  
   const completion = await openai.createCompletion({
     model: "text-davinci-003",
-    prompt: event.message.text ,
+    prompt: prompt_str ,
     max_tokens: 500,
   });
 
   // create a echoing text message
   const echo = { type: 'text', text: completion.data.choices[0].text.trim() };
-
   
   // use reply API
   return client.replyMessage(event.replyToken, echo);
